@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="#66000000"
+        tools:context=".view.HeroCard">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:background="@color/border"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                app:srcCompat="@drawable/ic_marvellogo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/heroPhoto"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <ImageButton
+                app:srcCompat="@drawable/ic_close"
+                android:background="@null"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/closeCardButton" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="@+id/heroPhoto"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/cardColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heroPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                android:id="@+id/constraintLayout2">
+
+            <TextView
+                    android:text="TextView"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/realNameTextView" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp" android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline"/>
+            <androidx.constraintlayout.widget.Guideline
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.5"
+                    android:id="@+id/guideline"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:id="@+id/heroHeightTextView"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="Powers"
+                    android:layout_width="0dp"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/realNameTextView"
+                    android:layout_marginTop="8dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="0dp"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/heroPowersTextView" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"/>
+            <TextView
+                    android:text="Abilities"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="12sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/heroPowersTextView"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="0dp"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/heroAbilitiesTextView" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"/>
+            <TextView
+                    android:text="Groups"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView8" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/heroAbilitiesTextView"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="0dp"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/heroGroupsTextView" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:background="#66000000"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+                app:layout_constraintStart_toStartOf="@+id/heroPhoto"
+                android:layout_marginBottom="8dp">
+            <TextView
+                    android:text="HERO NAME"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold"
+                    android:textSize="32sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:id="@+id/heroNameTextView" android:layout_weight="1"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
